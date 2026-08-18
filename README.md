@@ -7,10 +7,17 @@ A *wright* is someone who makes things by hand and by trade: a wheelwright, a
 shipwright, a playwright. This is a course built the same way — almost no reading,
 a great deal of doing.
 
+**→ [salmanjey-hash.github.io/gridwright](https://salmanjey-hash.github.io/gridwright/)**
+
 ## How to use it
 
-Double-click **`gridwright.html`**. That is the whole thing: one file, no install.
-Your progress is saved in the browser and survives closing it.
+Open the link above, or download **`gridwright.html`** and double-click it. Either way
+it is the same single file, and either way it works with no install and no account.
+Your progress is saved in that browser and survives closing it.
+
+Progress is stored per browser and per address, so the hosted version and a local copy
+keep separate records. Pick one and stay with it, or move between them with
+**Settings → Export progress**.
 
 Back it up now and then with **Settings → Export progress**, which writes a small
 `.json` file you can import on another machine or after clearing your browser data.
