@@ -1,0 +1,9 @@
+# Build output is committed on purpose: gridwright.html is the deliverable
+# and must be downloadable without a toolchain. Nothing else belongs here.
+
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+__pycache__/
+node_modules/

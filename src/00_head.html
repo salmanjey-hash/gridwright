@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-GB" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gridwright</title>
+<meta name="description" content="Excel and data analysis, from zero. Offline, free, no account.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23155e63'/><path d='M26 26h48v48' stroke='%237fd8c4' stroke-width='9' stroke-linecap='round' stroke-linejoin='round' fill='none'/><path d='M26 26 74 74' stroke='%237fd8c4' stroke-width='9' stroke-linecap='round'/><circle cx='26' cy='26' r='7' fill='%23155e63' stroke='%237fd8c4' stroke-width='6'/></svg>">
+<style>
+/*__CSS__*/
+</style>
+</head>
+<body>
+<!--__MARKUP__-->
+<script>
+/* SheetJS and Chart.js are optional enhancements loaded from cdnjs.
+   Gridwright is fully usable without them: workbooks fall back to .csv
+   and the dashboard falls back to inline SVG. Nothing blocks on them. */
+window.__DD_CDN__ = { xlsx: false, chart: false };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"
+        onload="window.__DD_CDN__.xlsx=true" onerror="window.__DD_CDN__.xlsx=false"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"
+        onload="window.__DD_CDN__.chart=true" onerror="window.__DD_CDN__.chart=false"></script>
+<script>
+/*__JS__*/
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* ============================================================
+   Lesson prose, callouts, formula chips, keyboard keys
+   ============================================================ */
+.prose { font-size: 16.5px; line-height: 1.68; color: var(--ink); }
+.prose > * + * { margin-top: 14px; }
+.prose h3 { margin-top: 26px; }
+.prose h4 { margin-top: 20px; color: var(--ink-2); text-transform: uppercase; letter-spacing: .07em; font-size: 12.5px; }
+.prose p { max-width: 68ch; }
+.prose strong { font-weight: 660; }
+.prose ul, .prose ol { padding-left: 4px; max-width: 68ch; }
+.prose li { position: relative; padding-left: 22px; margin-top: 7px; }
+.prose ul > li::before {
+  content: ""; position: absolute; left: 6px; top: .68em;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--accent-line);
+}
+.prose ol { counter-reset: li; }
+.prose ol > li { counter-increment: li; }
+.prose ol > li::before {
+  content: counter(li) "."; position: absolute; left: 0; top: 0;
+  font-variant-numeric: tabular-nums; font-weight: 650; color: var(--accent); font-size: 14px;
+}
+.prose .lead-blunt { font-size: 19px; line-height: 1.45; font-weight: 560; letter-spacing: -.01em; }
+
+code, .f {
+  font-family: var(--mono); font-size: .875em;
+  background: var(--surface-2); border: 1px solid var(--line-soft);
+  border-radius: 5px; padding: 1.5px 5px; white-space: nowrap;
+}
+.f { color: var(--accent); font-weight: 550; }
+.f-blk {
+  display: block; white-space: pre-wrap; padding: 11px 13px; border-radius: 9px;
+  font-family: var(--mono); font-size: 14px; line-height: 1.55;
+  background: var(--surface-2); border: 1px solid var(--line-soft); color: var(--ink);
+  overflow-x: auto;
+}
+kbd {
+  font-family: var(--sans); font-size: 12px; font-weight: 620;
+  background: var(--surface); border: 1px solid var(--line);
+  border-bottom-width: 2px; border-radius: 5px; padding: 1px 6px; white-space: nowrap;
+  box-shadow: 0 1px 0 rgba(0,0,0,.04);
+}
+
+.callout {
+  border-left: 3px solid var(--line); border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--surface-2); padding: 12px 15px; font-size: 15px;
+}
+.callout .callout-h { font-weight: 660; font-size: 12px; letter-spacing: .07em; text-transform: uppercase; margin-bottom: 4px; }
+.callout p + p { margin-top: 8px; }
+.callout-why  { border-color: var(--info);   background: var(--info-soft); }
+.callout-why .callout-h { color: var(--info); }
+.callout-trap { border-color: var(--bad);    background: var(--bad-soft); }
+.callout-trap .callout-h { color: var(--bad); }
+.callout-pro  { border-color: var(--good);   background: var(--good-soft); }
+.callout-pro .callout-h { color: var(--good); }
+.callout-web  { border-color: var(--warn);   background: var(--warn-soft); }
+.callout-web .callout-h { color: var(--warn); }
+/* an aside, not the main path: the desktop-only shortcut */
+.callout-desk { border-color: var(--ink-3); border-left-style: dashed; background: var(--surface-2); }
+.callout-desk .callout-h { color: var(--ink-2); }
+
+/* click-by-click step list */
+.steps { counter-reset: step; }
+.steps li {
+  counter-increment: step; position: relative; padding: 9px 0 9px 40px; margin: 0;
+  border-top: 1px solid var(--line-soft); font-size: 15.5px;
+}
+.steps li::before {
+  content: counter(step); position: absolute; left: 0; top: 9px;
+  width: 25px; height: 25px; border-radius: 50%;
+  background: var(--accent-soft); color: var(--accent);
+  font-size: 12.5px; font-weight: 700; display: grid; place-items: center;
+  font-variant-numeric: tabular-nums;
+}
+.steps li:first-child { border-top: 0; }
+
+/* fake Excel ribbon path, e.g. Home > Editing > Sort & Filter */
+.path { display: inline-flex; align-items: center; gap: 5px; flex-wrap: wrap; font-size: 13.5px; }
+.path span {
+  background: var(--surface-2); border: 1px solid var(--line-soft);
+  border-radius: 5px; padding: 1px 7px; font-weight: 560;
+}
+.path i { color: var(--ink-3); font-style: normal; }
+
+/* concept chips shown at lesson head */
+.chipset { display: flex; gap: 7px; flex-wrap: wrap; }
+.chip {
+  font-size: 12.5px; padding: 4px 10px; border-radius: 999px;
+  background: var(--surface-2); border: 1px solid var(--line-soft); color: var(--ink-2); font-weight: 550;
+}
